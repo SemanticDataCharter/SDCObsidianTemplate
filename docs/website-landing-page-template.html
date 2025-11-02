@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDCStudio Obsidian Template v4.0.0 | Free Download</title>
+    <meta name="description" content="Create SDC4-compliant dataset descriptions with ease using our free Obsidian template and professional theme. Includes interactive prompts and SDCStudio styling.">
+    <meta name="keywords" content="SDC4, Obsidian, data modeling, dataset description, template, semantic data">
+
+    <style>
+        /* Inline styles - adapt to match existing site design */
+        :root {
+            --sdc-primary: #0a2342;
+            --sdc-secondary: #2ca58d;
+            --sdc-accent: #f0a500;
+            --sdc-bg-light: #f7f9fb;
+            --sdc-text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--sdc-text);
+            background-color: var(--sdc-bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--sdc-primary) 0%, #164a73 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .lead {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--sdc-accent);
+            color: var(--sdc-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #ffb733;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .version-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Content Sections */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background-color: white;
+        }
+
+        h2 {
+            color: var(--sdc-primary);
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--sdc-primary);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .feature-card h3 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            color: var(--sdc-secondary);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: var(--sdc-text);
+        }
+
+        /* List Styles */
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Code and Tech */
+        code {
+            background-color: #e1e6ea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+        }
+
+        /* Compatibility Badge */
+        .badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .badge {
+            background-color: var(--sdc-secondary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--sdc-secondary) 0%, #249177 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--sdc-primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e1e6ea;
+        }
+
+        tr:hover {
+            background-color: rgba(44, 165, 141, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero .lead {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Use your existing site header/navigation here -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>SDCStudio Obsidian Template v4.0.0</h1>
+                <p class="lead">Create SDC4-compliant dataset descriptions with ease</p>
+
+                <a href="https://github.com/AxiusSDC/SDCObsidianTemplate/releases/latest" class="btn btn-primary" target="_blank" rel="noopener noreferrer" onclick="trackDownload()">
+                    📦 Download Latest Release (Free)
+                </a>
+
+                <p class="version-info">
+                    Latest: v4.0.0 | Released Nov 2, 2025 | Compatible with Obsidian v1.0.0+ |
+                    <a href="https://github.com/AxiusSDC/SDCObsidianTemplate" style="color: rgba(255,255,255,0.9);" target="_blank">View on GitHub</a>
+                </p>
+
+                <div class="badges">
+                    <span class="badge">✅ Free & Open</span>
+                    <span class="badge">✅ SDC4 Compliant</span>
+                    <span class="badge">✅ Easy Installation</span>
+                    <span class="badge">✅ Professional Styling</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section>
+            <div class="container">
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4.0</div>
+                        <div class="stat-label">Latest Version</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">26KB</div>
+                        <div class="stat-label">Tiny Download</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2-3</div>
+                        <div class="stat-label">Minutes to Install</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">SDCStudio Compatible</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section>
+            <div class="container">
+                <h2>What's Included</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Interactive Template</h3>
+                        <p>Guided prompts walk you through creating complete dataset descriptions. No SDC4 expertise required - the template handles the complexity.</p>
+                        <ul>
+                            <li>Smart type selection with SDC4 mapping</li>
+                            <li>Component reuse from NIEM, FHIR, HL7v3</li>
+                            <li>Structured constraints and validation</li>
+                            <li>Copy-paste templates for scalability</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Professional Theme</h3>
+                        <p>CSS theme matching SDCStudio's design system. Makes your markdown beautiful without modifying the files.</p>
+                        <ul>
+                            <li>SDCStudio color palette</li>
+                            <li>Professional table styling</li>
+                            <li>Special dataset element formatting</li>
+                            <li>Display-only (safe for upload)</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Complete Documentation</h3>
+                        <p>Everything you need to get started and become productive quickly.</p>
+                        <ul>
+                            <li>Step-by-step installation guide</li>
+                            <li>Usage tutorials with examples</li>
+                            <li>Type reference and best practices</li>
+                            <li>Troubleshooting help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section>
+            <div class="container">
+                <h2>Key Features</h2>
+
+                <h3>✨ What's New in v4.0.0</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problem (v1.0)</th>
+                            <th>Solution (v4.0.0)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>❌ System hanging and freezing</td>
+                            <td>✅ Non-blocking prompts with visual feedback</td>
+                        </tr>
+                        <tr>
+                            <td>❌ Limited to 2 columns</td>
+                            <td>✅ Unlimited scalability with copy-paste templates</td>
+                        </tr>
+                        <tr>
+                            <td>❌ Confusing type system</td>
+                            <td>✅ User-friendly types with SDC4 mapping</td>
+                        </tr>
+                        <tr>
+                            <td>❌ No component reuse</td>
+                            <td>✅ Full @ProjectName:ComponentLabel support</td>
+                        </tr>
+                        <tr>
+                            <td>❌ Poor markdown structure</td>
+                            <td>✅ Professional, spec-compliant output</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Quick Start -->
+        <section>
+            <div class="container">
+                <h2>Quick Start</h2>
+                <ol style="font-size: 1.2em; line-height: 2;">
+                    <li><strong>Download</strong> the ZIP file (26 KB)</li>
+                    <li><strong>Install</strong> Templater plugin in Obsidian (free)</li>
+                    <li><strong>Extract</strong> contents to your Obsidian vault</li>
+                    <li><strong>Enable</strong> the CSS theme in Settings → Appearance</li>
+                    <li><strong>Create</strong> your first dataset description!</li>
+                </ol>
+                <p style="text-align: center; margin-top: 30px;">
+                    <a href="#installation" style="color: var(--sdc-secondary); font-weight: 600;">View detailed installation guide →</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Type Reference -->
+        <section>
+            <div class="container">
+                <h2>User-Friendly Type System</h2>
+                <p style="text-align: center; margin-bottom: 30px;">No need to memorize SDC4 types - just pick what makes sense!</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type You Write</th>
+                            <th>Maps To SDC4</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>text</code></td>
+                            <td>XdString, XdToken</td>
+                            <td>Free text, strings, categorical with enum</td>
+                        </tr>
+                        <tr>
+                            <td><code>integer</code></td>
+                            <td>XdCount, XdOrdinal, XdIdentifier</td>
+                            <td>Whole numbers (add units for XdCount)</td>
+                        </tr>
+                        <tr>
+                            <td><code>decimal</code></td>
+                            <td>XdQuantity, XdFloat, XdDouble</td>
+                            <td>Numbers with decimals (add units for XdQuantity)</td>
+                        </tr>
+                        <tr>
+                            <td><code>boolean</code></td>
+                            <td>XdBoolean</td>
+                            <td>True/False, Yes/No</td>
+                        </tr>
+                        <tr>
+                            <td><code>date</code></td>
+                            <td>XdTemporal</td>
+                            <td>Dates only (YYYY-MM-DD)</td>
+                        </tr>
+                        <tr>
+                            <td><code>datetime</code></td>
+                            <td>XdTemporal</td>
+                            <td>Dates with time</td>
+                        </tr>
+                        <tr>
+                            <td><code>identifier</code></td>
+                            <td>XdIdentifier</td>
+                            <td>IDs, codes, UUIDs, reference numbers</td>
+                        </tr>
+                        <tr>
+                            <td><code>email</code></td>
+                            <td>XdString (validated)</td>
+                            <td>Email addresses</td>
+                        </tr>
+                        <tr>
+                            <td><code>url</code></td>
+                            <td>XdLink</td>
+                            <td>Web links, URLs, URIs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section>
+            <div class="container">
+                <h2>System Requirements</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Software</h3>
+                        <ul>
+                            <li>Obsidian v1.0.0 or later</li>
+                            <li>Templater plugin v1.16.0+ (free)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Operating Systems</h3>
+                        <ul>
+                            <li>Windows 10/11</li>
+                            <li>macOS 10.15+</li>
+                            <li>Linux (most distributions)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Disk Space</h3>
+                        <ul>
+                            <li>Download: 26 KB</li>
+                            <li>Installed: ~67 KB</li>
+                            <li>Virtually zero overhead!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatibility -->
+        <section>
+            <div class="container">
+                <h2>100% Compatible with SDCStudio</h2>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">
+                    Create beautiful datasets in Obsidian, upload pure markdown to SDCStudio.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>✅ Safe for Upload</h3>
+                        <p>The CSS theme only affects how Obsidian <em>displays</em> your markdown. Your files remain pure markdown with no CSS.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>✅ MD2PD Parser Ready</h3>
+                        <p>Output matches the official dataset-template.md guide exactly. SDCStudio parses it perfectly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>✅ Full Feature Support</h3>
+                        <p>Component reuse, structured constraints, YAML front matter - everything SDCStudio expects.</p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 40px;">
+                    <a href="https://github.com/AxiusSDC/SDCStudio" style="color: var(--sdc-secondary); font-weight: 600;" target="_blank" rel="noopener noreferrer">
+                        Learn more about SDCStudio →
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Get Started?</h2>
+                <p style="font-size: 1.2em; margin-bottom: 30px;">
+                    Download the template package and start creating professional dataset descriptions in minutes.
+                </p>
+
+                <a href="https://github.com/AxiusSDC/SDCObsidianTemplate/releases/latest" class="btn btn-primary" target="_blank" rel="noopener noreferrer" onclick="trackDownload()">
+                    📦 Download Latest Release (Free)
+                </a>
+
+                <p style="margin-top: 20px; opacity: 0.9;">
+                    <a href="https://github.com/AxiusSDC/SDCObsidianTemplate" style="color: rgba(255,255,255,0.9);">
+                        View on GitHub
+                    </a> |
+                    <a href="https://github.com/AxiusSDC/SDCObsidianTemplate/releases" style="color: rgba(255,255,255,0.9);">
+                        All Releases
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section>
+            <div class="container">
+                <h2>Support & Documentation</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📖 Documentation</h3>
+                        <p>Comprehensive guides included in the download:</p>
+                        <ul>
+                            <li>INSTALL.md - Step-by-step setup</li>
+                            <li>README-ObsidianTemplate.md - Usage guide</li>
+                            <li>README-SDCStudio-Theme.md - Theme docs</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>💬 Get Help</h3>
+                        <p>Need assistance?</p>
+                        <ul>
+                            <li>Check the troubleshooting sections</li>
+                            <li>Review SDCStudio documentation</li>
+                            <li>Contact our support team</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔄 Updates</h3>
+                        <p>Stay current:</p>
+                        <ul>
+                            <li>Check this page for new versions</li>
+                            <li>Subscribe to release notifications</li>
+                            <li>Follow semantic versioning (4.x.x)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Use your existing site footer here -->
+
+    <script>
+        // Analytics tracking
+        function trackDownload() {
+            // Google Analytics 4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download', {
+                    'event_category': 'resources',
+                    'event_label': 'obsidian-template-v4.0.0',
+                    'value': 1
+                });
+            }
+
+            // Alternative tracking (adapt to your analytics platform)
+            console.log('Download tracked: obsidian-template-v4.0.0.zip');
+        }
+    </script>
+</body>
+</html>
