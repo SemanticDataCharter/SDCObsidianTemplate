@@ -1,0 +1,390 @@
+/*
+ * SDCStudio Theme for Obsidian v4.0.0
+ * =====================================
+ *
+ * Makes Obsidian markdown look like SDCStudio's design system
+ *
+ * IMPORTANT: This CSS only affects how Obsidian DISPLAYS markdown.
+ * It does NOT modify your markdown files - they remain pure text.
+ * Safe for SDCStudio MD2PD upload!
+ *
+ * To Enable:
+ * 1. Obsidian Settings > Appearance > CSS Snippets
+ * 2. Click the reload icon (if needed)
+ * 3. Toggle "sdcstudio-theme" ON
+ *
+ * SDCStudio Color Palette:
+ * - Primary: #0a2342 (Deep Blue)
+ * - Secondary: #2ca58d (Teal)
+ * - Accent: #f0a500 (Gold)
+ * - Background: #f7f9fb (Off-White)
+ * - Text: #333333 (Dark Gray)
+ */
+
+/* ============================================================================
+   COLOR VARIABLES - SDCStudio Design System
+   ============================================================================ */
+
+:root {
+    /* SDCStudio Primary Colors */
+    --sdc-primary: #0a2342;       /* Deep Blue - headers, primary actions */
+    --sdc-secondary: #2ca58d;     /* Teal - links, secondary actions */
+    --sdc-accent: #f0a500;        /* Gold - highlights, warnings */
+    --sdc-accent-light: #8db9d9;  /* Light Blue - subtle accents */
+
+    /* SDCStudio Backgrounds */
+    --sdc-bg-light: #f7f9fb;      /* Off-White - main background */
+    --sdc-bg-border: #e1e6ea;     /* Light Gray - borders, dividers */
+    --sdc-bg-white: #ffffff;      /* Pure White - cards, elevated surfaces */
+
+    /* SDCStudio Text Colors */
+    --sdc-text-dark: #333333;     /* Dark Gray - primary text */
+    --sdc-text-medium: #a9b4c2;   /* Medium Gray - secondary text */
+    --sdc-text-light: #f7f9fb;    /* Light text on dark backgrounds */
+}
+
+/* ============================================================================
+   LIGHT THEME OVERRIDES
+   ============================================================================ */
+
+.theme-light {
+    /* Override Obsidian's default colors with SDCStudio palette */
+    --text-normal: var(--sdc-text-dark);
+    --text-muted: var(--sdc-text-medium);
+    --text-faint: var(--sdc-text-medium);
+
+    --background-primary: var(--sdc-bg-light);
+    --background-secondary: var(--sdc-bg-white);
+    --background-secondary-alt: var(--sdc-bg-border);
+
+    --interactive-accent: var(--sdc-secondary);
+    --interactive-accent-hover: var(--sdc-primary);
+
+    --background-modifier-border: var(--sdc-bg-border);
+    --background-modifier-hover: var(--sdc-bg-border);
+}
+
+/* ============================================================================
+   HEADINGS - SDCStudio Style
+   ============================================================================ */
+
+/* All headings use SDCStudio deep blue */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-header {
+    color: var(--sdc-primary) !important;
+    font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Heading sizes */
+.markdown-preview-view h1 { font-size: 2.5em; margin-top: 1.5em; margin-bottom: 0.5em; }
+.markdown-preview-view h2 { font-size: 2em; margin-top: 1.25em; margin-bottom: 0.5em; }
+.markdown-preview-view h3 { font-size: 1.75em; margin-top: 1em; margin-bottom: 0.5em; }
+.markdown-preview-view h4 { font-size: 1.5em; margin-top: 1em; margin-bottom: 0.5em; }
+.markdown-preview-view h5 { font-size: 1.25em; margin-top: 0.75em; margin-bottom: 0.5em; }
+.markdown-preview-view h6 { font-size: 1em; margin-top: 0.75em; margin-bottom: 0.5em; }
+
+/* ============================================================================
+   LINKS - SDCStudio Teal
+   ============================================================================ */
+
+.markdown-preview-view a,
+.cm-link {
+    color: var(--sdc-secondary) !important;
+    text-decoration: none;
+}
+
+.markdown-preview-view a:hover,
+.cm-link:hover {
+    color: var(--sdc-primary) !important;
+    text-decoration: underline;
+}
+
+/* Internal links (wiki-style) */
+.markdown-preview-view .internal-link {
+    color: var(--sdc-secondary) !important;
+}
+
+.markdown-preview-view .internal-link:hover {
+    color: var(--sdc-primary) !important;
+}
+
+/* ============================================================================
+   CODE BLOCKS - SDCStudio Style
+   ============================================================================ */
+
+/* Inline code */
+.markdown-preview-view code,
+.cm-inline-code {
+    background-color: var(--sdc-bg-border) !important;
+    color: var(--sdc-primary) !important;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+/* Code blocks */
+.markdown-preview-view pre {
+    background-color: var(--sdc-bg-border) !important;
+    border: 1px solid var(--sdc-bg-border);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 1em 0;
+}
+
+.markdown-preview-view pre code {
+    background-color: transparent !important;
+    padding: 0;
+}
+
+/* ============================================================================
+   TABLES - SDCStudio Professional Style
+   ============================================================================ */
+
+.markdown-preview-view table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+    background-color: var(--sdc-bg-white);
+    border: 1px solid var(--sdc-bg-border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Table headers - SDCStudio blue background */
+.markdown-preview-view th {
+    background-color: var(--sdc-primary) !important;
+    color: var(--sdc-text-light) !important;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    border: none;
+}
+
+/* Table cells */
+.markdown-preview-view td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--sdc-bg-border);
+    border-right: 1px solid var(--sdc-bg-border);
+}
+
+.markdown-preview-view td:last-child {
+    border-right: none;
+}
+
+.markdown-preview-view tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternating row colors for better readability */
+.markdown-preview-view tbody tr:nth-child(even) {
+    background-color: var(--sdc-bg-light);
+}
+
+.markdown-preview-view tbody tr:hover {
+    background-color: rgba(44, 165, 141, 0.1) !important;
+}
+
+/* ============================================================================
+   LISTS - Clean SDCStudio Style
+   ============================================================================ */
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+    color: var(--sdc-text-dark);
+    line-height: 1.8;
+}
+
+.markdown-preview-view li {
+    margin-bottom: 0.5em;
+}
+
+/* Bullet points use SDCStudio teal */
+.markdown-preview-view ul > li::marker {
+    color: var(--sdc-secondary);
+}
+
+/* Numbered lists use SDCStudio primary blue */
+.markdown-preview-view ol > li::marker {
+    color: var(--sdc-primary);
+    font-weight: 600;
+}
+
+/* ============================================================================
+   BLOCKQUOTES - SDCStudio Accent
+   ============================================================================ */
+
+.markdown-preview-view blockquote {
+    border-left: 4px solid var(--sdc-secondary) !important;
+    background-color: rgba(44, 165, 141, 0.05);
+    padding: 12px 16px;
+    margin: 1em 0;
+    border-radius: 0 6px 6px 0;
+    color: var(--sdc-text-dark);
+}
+
+/* ============================================================================
+   CALLOUTS / ADMONITIONS - SDCStudio Colors
+   ============================================================================ */
+
+.markdown-preview-view .callout {
+    border-left-width: 4px;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 1em 0;
+}
+
+/* Info callout - Primary blue */
+.markdown-preview-view .callout[data-callout="info"] {
+    border-left-color: var(--sdc-primary) !important;
+    background-color: rgba(10, 35, 66, 0.05);
+}
+
+/* Warning callout - Gold accent */
+.markdown-preview-view .callout[data-callout="warning"] {
+    border-left-color: var(--sdc-accent) !important;
+    background-color: rgba(240, 165, 0, 0.05);
+}
+
+/* Success callout - Teal */
+.markdown-preview-view .callout[data-callout="success"],
+.markdown-preview-view .callout[data-callout="tip"] {
+    border-left-color: var(--sdc-secondary) !important;
+    background-color: rgba(44, 165, 141, 0.05);
+}
+
+/* Error callout - Keep as red */
+.markdown-preview-view .callout[data-callout="error"],
+.markdown-preview-view .callout[data-callout="danger"] {
+    border-left-color: #dc3545 !important;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* ============================================================================
+   HORIZONTAL RULES
+   ============================================================================ */
+
+.markdown-preview-view hr {
+    border: none;
+    border-top: 2px solid var(--sdc-bg-border);
+    margin: 2em 0;
+}
+
+/* ============================================================================
+   YAML FRONT MATTER - Highlight Important Metadata
+   ============================================================================ */
+
+.markdown-preview-view .frontmatter {
+    background-color: var(--sdc-bg-light) !important;
+    border: 1px solid var(--sdc-bg-border);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 2em;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-preview-view .frontmatter-container {
+    background-color: var(--sdc-bg-light) !important;
+}
+
+/* ============================================================================
+   TAGS - SDCStudio Style
+   ============================================================================ */
+
+.markdown-preview-view .tag,
+.cm-tag {
+    background-color: var(--sdc-secondary) !important;
+    color: var(--sdc-text-light) !important;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.markdown-preview-view .tag:hover {
+    background-color: var(--sdc-primary) !important;
+}
+
+/* ============================================================================
+   EDITOR (Source Mode) - Professional Look
+   ============================================================================ */
+
+.cm-editor {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Bold text */
+.cm-strong {
+    color: var(--sdc-primary) !important;
+    font-weight: 700;
+}
+
+/* Italic text */
+.cm-em {
+    color: var(--sdc-text-dark);
+    font-style: italic;
+}
+
+/* ============================================================================
+   SPECIAL: Dataset Template Styling
+   ============================================================================ */
+
+/* Highlight important fields in dataset descriptions */
+.markdown-preview-view strong:contains("Type:"),
+.markdown-preview-view strong:contains("Description:"),
+.markdown-preview-view strong:contains("Constraints:"),
+.markdown-preview-view strong:contains("Purpose:") {
+    color: var(--sdc-primary) !important;
+}
+
+/* Make column/component names stand out */
+.markdown-preview-view h3:contains("Column:"),
+.markdown-preview-view h3:contains("Component:") {
+    color: var(--sdc-primary) !important;
+    border-bottom: 2px solid var(--sdc-secondary);
+    padding-bottom: 0.25em;
+}
+
+/* Cluster headers */
+.markdown-preview-view h2:contains("Cluster:"),
+.markdown-preview-view h2:contains("Root Cluster:") {
+    background: linear-gradient(90deg, rgba(10, 35, 66, 0.1) 0%, transparent 100%);
+    padding: 0.5em 0.75em;
+    border-left: 4px solid var(--sdc-primary);
+    border-radius: 0 6px 6px 0;
+}
+
+/* ============================================================================
+   SCROLLBARS (Webkit browsers only)
+   ============================================================================ */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sdc-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sdc-bg-border);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sdc-text-medium);
+}
+
+/* ============================================================================
+   END OF SDCSTUDIO THEME
+   ============================================================================ */
