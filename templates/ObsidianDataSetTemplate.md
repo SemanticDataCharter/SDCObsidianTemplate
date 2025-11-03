@@ -1,6 +1,6 @@
 <%*
 /*
- * SDCStudio Dataset Template v4.0.0
+ * SDCStudio Dataset Template v4.0.1
  * ===================================
  *
  * This template creates SDC4-compliant dataset descriptions for upload to SDCStudio.
@@ -68,7 +68,7 @@ const scope = await tp.system.prompt("Scope (optional):", "Time period, geograph
 
 // Build YAML front matter
 content = `---
-template_version: "4.0.0"
+template_version: "4.0.1"
 creation_date: <% tp.file.creation_date() %>
 last_modified: <% tp.file.last_modified_date("YYYY-MM-DD HH:mm:ss") %>
 dataset:

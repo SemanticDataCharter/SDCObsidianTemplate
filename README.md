@@ -1,6 +1,6 @@
 # SDCStudio Obsidian Template
 
-[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](https://github.com/AxiusSDC/SDCObsidianTemplate/releases)
+[![Version](https://img.shields.io/badge/version-4.0.1-blue.svg)](https://github.com/AxiusSDC/SDCObsidianTemplate/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 [![SDC](https://img.shields.io/badge/SDC-4.0-orange.svg)](https://github.com/SemanticDataCharter)
 
@@ -37,7 +37,7 @@ An interactive [Templater](https://github.com/SilentVoid13/Templater) template a
 
 ## ✨ Features
 
-### Interactive Template (v4.0.0)
+### Interactive Template (v4.0.1)
 
 - ✅ **Non-blocking prompts** - No more system hanging!
 - ✅ **User-friendly type system** - Select from `text`, `integer`, `decimal`, `boolean`, `date`, `datetime`, `identifier`, `email`, `url` with automatic SDC4 mapping
@@ -62,7 +62,7 @@ An interactive [Templater](https://github.com/SilentVoid13/Templater) template a
 ```
 SDCObsidianTemplate/
 ├── templates/
-│   └── ObsidianDataSetTemplate.md    # Main Templater template (v4.0.0)
+│   └── ObsidianDataSetTemplate.md    # Main Templater template (v4.0.1)
 ├── snippets/
 │   └── sdcstudio-theme.css           # CSS theme for SDCStudio styling
 ├── docs/
@@ -109,7 +109,16 @@ SDCObsidianTemplate/
 
 ## 🔄 Version History
 
-### v4.0.0 (2025-11-02) - Current
+### v4.0.1 (2025-11-03) - Current
+
+**Documentation Enhancement**
+
+- Added comprehensive KEYWORD_REFERENCE.md (430+ lines)
+- Complete documentation for all keywords and syntax
+- Aligned with SDCStudio keyword documentation
+- Added references in README, USAGE, and template
+
+### v4.0.0 (2025-11-02)
 
 **Major redesign fixing all v1.0 issues**
 
