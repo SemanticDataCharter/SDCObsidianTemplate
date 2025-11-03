@@ -17,6 +17,31 @@ All versions in the 4.x.x series are compatible with SDC4.
 
 ---
 
+## [4.0.1] - 2025-11-03
+
+### 📚 Documentation Enhancement
+
+#### Added
+- **KEYWORD_REFERENCE.md** - Comprehensive keyword documentation guide
+  - Complete reference for all valid keywords (column, cluster, and dataset levels)
+  - Documentation keywords for rich metadata (PHI Status, Clinical Significance, etc.)
+  - Type mapping reference with intelligent context-based mapping
+  - Enumeration and constraints syntax with examples
+  - Common patterns and best practices
+  - Validation messages and troubleshooting
+  - 430+ lines of detailed guidance
+
+#### Changed
+- **README.md** - Added link to KEYWORD_REFERENCE.md in documentation section
+- **USAGE.md** - Added Keyword Reference section linking to comprehensive guide
+- **ObsidianDataSetTemplate.md** - Added reference to KEYWORD_REFERENCE.md in inline help comments
+
+#### Fixes
+- Ensures consistency with SDCStudio keyword documentation
+- Provides users with complete reference for all template features
+
+---
+
 ## [4.0.0] - 2025-11-02
 
 ### 🎉 Initial Public Release

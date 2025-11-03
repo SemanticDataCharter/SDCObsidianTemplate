@@ -311,8 +311,12 @@ content += `
 
 <!--
 ===============================================================================
-COPY-PASTE TEMPLATES
+COPY-PASTE TEMPLATES & KEYWORD REFERENCE
 ===============================================================================
+
+📚 COMPREHENSIVE KEYWORD REFERENCE:
+   See docs/KEYWORD_REFERENCE.md for complete documentation of all keywords,
+   syntax, examples, and best practices.
 
 Need to add more columns? Copy the template below and fill in the details:
 

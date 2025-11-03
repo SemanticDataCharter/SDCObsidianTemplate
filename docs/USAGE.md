@@ -146,6 +146,18 @@ Just copy this, fill in the details, and paste where needed!
 | `email` | XdString | Email addresses (validated) |
 | `url` | XdLink | Web links, URLs, URIs |
 
+## Keyword Reference
+
+For complete documentation on all available keywords, syntax, examples, and best practices, see **[KEYWORD_REFERENCE.md](KEYWORD_REFERENCE.md)**.
+
+This comprehensive guide covers:
+- All valid column-level keywords (Type, Description, Units, Enumeration, etc.)
+- Cluster-level and dataset-level keywords
+- Documentation keywords for rich metadata
+- Type mapping reference
+- Common patterns and examples
+- Validation messages and troubleshooting
+
 ## Tips
 
 ### Performance

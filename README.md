@@ -165,6 +165,7 @@ SDCObsidianTemplate/
 
 - **[Installation Guide](docs/INSTALL.md)** - Step-by-step setup instructions
 - **[Usage Guide](docs/USAGE.md)** - How to use the template with examples
+- **[Keyword Reference](docs/KEYWORD_REFERENCE.md)** - Complete keyword documentation and syntax guide
 - **[Theme Guide](docs/THEME.md)** - CSS theme setup and customization
 - **[Changelog](CHANGELOG.md)** - Version history and changes
 - **[Contributing](CONTRIBUTING.md)** - How to contribute to this project
